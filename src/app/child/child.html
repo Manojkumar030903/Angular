@@ -1,3 +1,4 @@
+<!-- Child view: renders posts passed from the parent and calls back to remove -->
 <div class="child">
 	<strong *ngIf="posts().length; else noPosts">Child received {{ posts().length }} posts:</strong>
 	<ng-template #noPosts>

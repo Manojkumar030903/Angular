@@ -1,3 +1,4 @@
+// Express server wrapper for server-side rendering of the Angular app.
 import {
   AngularNodeAppEngine,
   createNodeRequestHandler,

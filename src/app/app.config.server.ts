@@ -1,3 +1,4 @@
+// Server-side application config: merges client config and SSR providers.
 import { mergeApplicationConfig, ApplicationConfig } from '@angular/core';
 import { provideServerRendering, withRoutes } from '@angular/ssr';
 import { appConfig } from './app.config';

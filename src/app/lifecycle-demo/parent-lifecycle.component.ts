@@ -1,3 +1,4 @@
+// Parent lifecycle demo component: demonstrates lifecycle hooks and uses `DataService`.
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DataService, PostItem } from './data.service';
 import { CommonModule } from '@angular/common';

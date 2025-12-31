@@ -20,4 +20,17 @@ describe('Child', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('renders posts and calls remove callback', () => {
+    component.posts = [{ id: 1, title: 'T1' }];
+    component.onRemove = jasmine.createSpy('onRemove');
+    fixture.detectChanges();
+
+    const li = fixture.nativeElement.querySelectorAll('li')[0];
+    expect(li.textContent).toContain('T1');
+
+    const btn = fixture.nativeElement.querySelector('button');
+    btn.click();
+    expect((component.onRemove as jasmine.Spy).calls.any()).toBeTrue();
+  });
 });

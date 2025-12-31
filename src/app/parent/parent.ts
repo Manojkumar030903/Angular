@@ -1,3 +1,4 @@
+// Parent component: loads posts and passes data/callback to the `Child` component.
 import { Component, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Child } from '../child/child';

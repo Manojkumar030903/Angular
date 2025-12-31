@@ -1,3 +1,4 @@
+// Client application configuration: providers and router setup.
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter } from '@angular/router';
 

@@ -1,3 +1,4 @@
+// Root application component bootstrap; wires main layout and child components.
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Parent } from './parent/parent';

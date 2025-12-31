@@ -1,2 +1,4 @@
+/* Styles for child lifecycle demo component */
+
 .child-card { border: 1px solid #ddd; padding: 8px; border-radius: 6px; margin: 6px 0; }
 .logs { margin-top: 8px; font-size: 0.85rem; color: #444 }

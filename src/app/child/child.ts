@@ -1,3 +1,4 @@
+// Child component: receives posts and a remove callback from the parent.
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { input } from '@angular/core';

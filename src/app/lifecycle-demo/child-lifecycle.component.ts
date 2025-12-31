@@ -1,3 +1,4 @@
+// Child lifecycle demo component: shows lifecycle hooks and emits remove events.
 import { Component, Input, Output, EventEmitter, OnInit, OnChanges, SimpleChanges, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 

@@ -1,0 +1,12 @@
+<div class="child-card">
+  <h4>Child: {{ item?.title }}</h4>
+  <p>{{ item?.body }}</p>
+  <button (click)="onRemoveClick()">Delete (child)</button>
+
+  <div class="logs">
+    <h5>Child lifecycle logs</h5>
+    <ul>
+      <li *ngFor="let l of logs">{{ l }}</li>
+    </ul>
+  </div>
+</div>

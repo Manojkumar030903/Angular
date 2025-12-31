@@ -1,0 +1,29 @@
+<section class="demo">
+  <h3>Lifecycle Demo (Parent)</h3>
+
+  <div>
+    <button (click)="items = items.slice(1)">Remove first (parent UI only)</button>
+  </div>
+
+  <div class="parent-list">
+    <h4>Parent list</h4>
+    <ul>
+      <li *ngFor="let it of items">
+        <strong>{{ it.id }}.</strong> {{ it.title }}
+        <button (click)="remove(it.id)">Delete (parent)</button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="child-area">
+    <h4>Child components</h4>
+    <lifecycle-child *ngFor="let it of items" [item]="it" (remove)="remove($event)"></lifecycle-child>
+  </div>
+
+  <div class="logs">
+    <h4>Parent logs</h4>
+    <ul>
+      <li *ngFor="let l of logs">{{ l }}</li>
+    </ul>
+  </div>
+</section>

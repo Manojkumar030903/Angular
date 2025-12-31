@@ -1,0 +1,17 @@
+<section class="parent">
+	<h2>Parent Component {{ posts().length }}</h2>
+
+	<p *ngIf="loading()">Loading posts...</p>
+	<p *ngIf="error()" class="error">Error: {{ error() }}</p>
+
+	<!-- Parent's own rendering of posts -->
+	<ul *ngIf="posts().length">
+		<li *ngFor="let p of posts()">
+			<strong>{{ p.id }}.</strong> {{ p.title }}
+			<button (click)="removePost(p.id)">Delete (Parent)</button>
+		</li>
+	</ul>
+
+	<!-- Child receives the posts and the remove callback -->
+	<app-child [posts]="posts()" [onRemove]="removePost"></app-child>
+</section>

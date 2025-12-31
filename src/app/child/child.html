@@ -1,0 +1,13 @@
+<div class="child">
+	<strong *ngIf="posts().length; else noPosts">Child received {{ posts().length }} posts:</strong>
+	<ng-template #noPosts>
+		<strong>No posts available</strong>
+	</ng-template>
+
+	<ul *ngIf="posts().length">
+		<li *ngFor="let p of posts()">
+			<strong>{{ p.id }}.</strong> {{ p.title }}
+			<button (click)="onRemove()(p.id)">Delete (Child)</button>
+		</li>
+	</ul>
+</div>
